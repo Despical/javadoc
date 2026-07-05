@@ -1,0 +1,14 @@
+[
+  {
+    "slug": "TNTRun",
+    "title": "TNTRun",
+    "repo": "https://github.com/Despical/TNTRun.git",
+    "branch": "javadoc"
+  },
+  {
+    "slug": "CommandFramework",
+    "title": "CommandFramework",
+    "repo": "https://github.com/Despical/CommandFramework.git",
+    "branch": "javadoc"
+  }
+]
