@@ -44,7 +44,6 @@ jobs:
         with:
           name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
           path: public
-          include-hidden-files: true
 
       - name: Deploy to GitHub Pages
         id: deployment
