@@ -1,0 +1,6 @@
+module:dev.despical.commandframework
+dev.despical.commandframework
+dev.despical.commandframework.annotations
+dev.despical.commandframework.debug
+dev.despical.commandframework.exceptions
+dev.despical.commandframework.options

@@ -9,20 +9,15 @@ on:
     - cron: "17 3 * * *"
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages
+  group: javadocs
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  sync:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout
@@ -36,17 +31,19 @@ jobs:
       - name: Sync Javadocs
         run: node scripts/sync-javadocs.mjs
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+      - name: Publish generated files to branch root
+        run: |
+          cp -R public/TNTRun public/CommandFramework .
+          cp public/index.html public/.nojekyll public/CNAME .
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
-          path: public
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-        with:
-          artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Commit generated Javadocs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html .nojekyll CNAME TNTRun CommandFramework
+          if git diff --cached --quiet; then
+            echo "No Javadoc changes to commit."
+          else
+            git commit -m "Update generated Javadocs"
+            git push
+          fi
