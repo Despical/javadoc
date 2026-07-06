@@ -4,8 +4,8 @@ Central GitHub Pages site for Despical project Javadocs.
 
 Published URLs:
 
-- `https://javadoc.despical.dev/TNTRun/`
-- `https://javadoc.despical.dev/CommandFramework/`
+- `https://javadoc.despical.dev/tnt-run/`
+- `https://javadoc.despical.dev/command-framework/`
 
 ## How it works
 
