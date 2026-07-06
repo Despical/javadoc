@@ -1,72 +1,69 @@
-import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
-import { basename, join } from "node:path";
-import { tmpdir } from "node:os";
-import { execFileSync } from "node:child_process";
+import {cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync} from "node:fs";
+import {join} from "node:path";
+import {tmpdir} from "node:os";
+import {execFileSync} from "node:child_process";
 
 const root = process.cwd();
 const siteDir = join(root, "public");
 const projects = JSON.parse(readFileSync(join(root, "projects.json"), "utf8"));
 const generatedAt = new Date().toISOString();
 
-rmSync(siteDir, { recursive: true, force: true });
-mkdirSync(siteDir, { recursive: true });
+rmSync(siteDir, {recursive: true, force: true});
+mkdirSync(siteDir, {recursive: true});
 writeFileSync(join(siteDir, ".nojekyll"), "");
 writeFileSync(join(siteDir, "CNAME"), "javadoc.despical.dev\n");
 
 for (const project of projects) {
-  validateProject(project);
+    validateProject(project);
 
-  const tempDir = join(tmpdir(), `javadoc-${project.slug}-${Date.now()}`);
-  const targetDir = join(siteDir, project.slug);
+    const tempDir = join(tmpdir(), `javadoc-${project.slug}-${Date.now()}`);
+    const targetDir = join(siteDir, project.slug);
 
-  console.log(`Cloning ${project.repo}#${project.branch}`);
-  execFileSync("git", [
-    "clone",
-    "--depth",
-    "1",
-    "--branch",
-    project.branch,
-    project.repo,
-    tempDir
-  ], { stdio: "inherit" });
+    console.log(`Cloning ${project.repo}#${project.branch}`);
+    execFileSync("git", [
+        "clone",
+        "--depth",
+        "1",
+        "--branch",
+        project.branch,
+        project.repo,
+        tempDir
+    ], {stdio: "inherit"});
 
-  mkdirSync(targetDir, { recursive: true });
+    mkdirSync(targetDir, {recursive: true});
+    copyDirectoryContents(tempDir, targetDir, [".git", ".github", "CNAME"]);
 
-  for (const entry of readdirSync(tempDir, { withFileTypes: true })) {
-    if ([".git", ".github", "CNAME"].includes(entry.name)) {
-      continue;
+    rmSync(tempDir, {recursive: true, force: true});
+
+    if (!existsSync(join(targetDir, "index.html"))) {
+        throw new Error(`${project.slug} did not contain an index.html in ${project.branch}`);
     }
-
-    cpSync(join(tempDir, entry.name), join(targetDir, entry.name), {
-      recursive: true,
-      force: true
-    });
-  }
-
-  rmSync(tempDir, { recursive: true, force: true });
-
-  if (!existsSync(join(targetDir, "index.html"))) {
-    throw new Error(`${project.slug} did not contain an index.html in ${project.branch}`);
-  }
 }
 
 writeFileSync(join(siteDir, "index.html"), renderIndex(projects, generatedAt));
 
 function validateProject(project) {
-  const missing = ["slug", "title", "repo", "branch"].filter((key) => !project[key]);
-  if (missing.length > 0) {
-    throw new Error(`Invalid project entry. Missing: ${missing.join(", ")}`);
-  }
+    const missing = ["slug", "title", "repo", "spigot", "branch"].filter((key) => !project[key]);
+    if (missing.length > 0) {
+        throw new Error(`Invalid project entry. Missing: ${missing.join(", ")}`);
+    }
 }
 
 function renderIndex(projects, generatedAt) {
-  const links = projects.map((project) => `
+    const links = projects.map((project) => `
       <li>
         <a href="./${escapeHtml(project.slug)}/">${escapeHtml(project.title)}</a>
-        <span>${escapeHtml(basename(project.repo, ".git"))}</span>
+        <div class="project-links">
+          <a class="icon-link" href="${escapeHtml(project.repo.replace(/\.git$/, ""))}" aria-label="${escapeHtml(project.title)} on GitHub" title="GitHub">
+            <img src="./assets/icons/github.svg" alt="" width="20" height="20">
+          </a>
+          <a class="icon-link" href="${escapeHtml(project.spigot)}" aria-label="${escapeHtml(project.title)} on SpigotMC" title="SpigotMC">
+            <img src="./assets/icons/spigot.svg" alt="" width="20" height="20">
+          </a>
+        </div>
       </li>`).join("");
 
-  return `<!doctype html>
+    return `<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -134,9 +131,32 @@ function renderIndex(projects, generatedAt) {
       text-decoration: underline;
     }
 
-    span {
-      color: #68727d;
-      font-size: 0.92rem;
+    .project-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 0 0 auto;
+    }
+
+    .icon-link {
+      display: inline-grid;
+      width: 36px;
+      height: 36px;
+      place-items: center;
+      border: 1px solid #d7d9d6;
+      border-radius: 8px;
+      color: #1d2329;
+      background: #f8fafb;
+    }
+
+    .icon-link:hover {
+      border-color: #8fcfff;
+      background: #eef8ff;
+      text-decoration: none;
+    }
+
+    .icon-link img {
+      display: block;
     }
 
     footer {
@@ -150,6 +170,10 @@ function renderIndex(projects, generatedAt) {
         align-items: flex-start;
         flex-direction: column;
       }
+
+      .project-links {
+        align-self: stretch;
+      }
     }
 
     @media (prefers-color-scheme: dark) {
@@ -159,7 +183,6 @@ function renderIndex(projects, generatedAt) {
       }
 
       p,
-      span,
       footer {
         color: #aeb6bf;
       }
@@ -172,27 +195,69 @@ function renderIndex(projects, generatedAt) {
       a {
         color: #7cc7ff;
       }
+
+      .icon-link {
+        border-color: #39414a;
+        color: #f4f0e8;
+        background: #171b1f;
+      }
+
+      .icon-link:hover {
+        border-color: #5faee8;
+        background: #1b2831;
+      }
     }
   </style>
 </head>
 <body>
   <main>
-    <h1>Despical Javadocs</h1>
+    <h1>Despical's Javadocs</h1>
     <p>Generated API documentation for open source Despical projects.</p>
     <ul>${links}
     </ul>
-    <footer>Last synced: ${escapeHtml(generatedAt)}</footer>
+    <footer>Last synced: ${escapeHtml(formatGeneratedAt(generatedAt))}</footer>
   </main>
 </body>
 </html>
 `;
 }
 
+function formatGeneratedAt(value) {
+    return new Intl.DateTimeFormat("en-US", {
+        timeZone: "Europe/Istanbul",
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false
+    }).format(new Date(value));
+}
+
+function copyDirectoryContents(source, target, ignored = []) {
+    mkdirSync(target, {recursive: true});
+
+    for (const entry of readdirSync(source, {withFileTypes: true})) {
+        if (ignored.includes(entry.name)) {
+            continue;
+        }
+
+        const sourcePath = join(source, entry.name);
+        const targetPath = join(target, entry.name);
+
+        if (entry.isDirectory()) {
+            copyDirectoryContents(sourcePath, targetPath);
+        } else {
+            cpSync(sourcePath, targetPath, {force: true});
+        }
+    }
+}
+
 function escapeHtml(value) {
-  return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;");
+    return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
 }

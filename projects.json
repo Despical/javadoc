@@ -3,12 +3,14 @@
     "slug": "tnt-run",
     "title": "TNTRun",
     "repo": "https://github.com/Despical/TNTRun.git",
+    "spigot": "https://www.spigotmc.org/resources/tnt-run-1-9-1-21-5.83196/",
     "branch": "javadoc"
   },
   {
     "slug": "command-framework",
     "title": "CommandFramework",
     "repo": "https://github.com/Despical/CommandFramework.git",
+    "spigot": "https://www.spigotmc.org/resources/command-framework-1-7-26-2.89933/",
     "branch": "javadoc"
   }
 ]

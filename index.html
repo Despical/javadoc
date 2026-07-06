@@ -66,9 +66,32 @@
       text-decoration: underline;
     }
 
-    span {
-      color: #68727d;
-      font-size: 0.92rem;
+    .project-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 0 0 auto;
+    }
+
+    .icon-link {
+      display: inline-grid;
+      width: 36px;
+      height: 36px;
+      place-items: center;
+      border: 1px solid #d7d9d6;
+      border-radius: 8px;
+      color: #1d2329;
+      background: #f8fafb;
+    }
+
+    .icon-link:hover {
+      border-color: #8fcfff;
+      background: #eef8ff;
+      text-decoration: none;
+    }
+
+    .icon-link img {
+      display: block;
     }
 
     footer {
@@ -82,6 +105,10 @@
         align-items: flex-start;
         flex-direction: column;
       }
+
+      .project-links {
+        align-self: stretch;
+      }
     }
 
     @media (prefers-color-scheme: dark) {
@@ -91,7 +118,6 @@
       }
 
       p,
-      span,
       footer {
         color: #aeb6bf;
       }
@@ -104,24 +130,49 @@
       a {
         color: #7cc7ff;
       }
+
+      .icon-link {
+        border-color: #39414a;
+        color: #f4f0e8;
+        background: #171b1f;
+      }
+
+      .icon-link:hover {
+        border-color: #5faee8;
+        background: #1b2831;
+      }
     }
   </style>
 </head>
 <body>
   <main>
-    <h1>Despical Javadocs</h1>
+    <h1>Despical's Javadocs</h1>
     <p>Generated API documentation for open source Despical projects.</p>
     <ul>
       <li>
         <a href="./tnt-run/">TNTRun</a>
-        <span>TNTRun</span>
+        <div class="project-links">
+          <a class="icon-link" href="https://github.com/Despical/TNTRun" aria-label="TNTRun on GitHub" title="GitHub">
+            <img src="./assets/icons/github.svg" alt="" width="20" height="20">
+          </a>
+          <a class="icon-link" href="https://www.spigotmc.org/resources/tnt-run-1-9-1-21-5.83196/" aria-label="TNTRun on SpigotMC" title="SpigotMC">
+            <img src="./assets/icons/spigot.svg" alt="" width="20" height="20">
+          </a>
+        </div>
       </li>
       <li>
         <a href="./command-framework/">CommandFramework</a>
-        <span>CommandFramework</span>
+        <div class="project-links">
+          <a class="icon-link" href="https://github.com/Despical/CommandFramework" aria-label="CommandFramework on GitHub" title="GitHub">
+            <img src="./assets/icons/github.svg" alt="" width="20" height="20">
+          </a>
+          <a class="icon-link" href="https://www.spigotmc.org/resources/command-framework-1-7-26-2.89933/" aria-label="CommandFramework on SpigotMC" title="SpigotMC">
+            <img src="./assets/icons/spigot.svg" alt="" width="20" height="20">
+          </a>
+        </div>
       </li>
     </ul>
-    <footer>Last synced: 2026-07-06T07:44:45.164Z</footer>
+    <footer>Last synced: Jul 6, 2026, 10:51</footer>
   </main>
 </body>
 </html>

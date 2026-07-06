@@ -48,9 +48,13 @@ function copyDirectoryContents(source, target) {
   mkdirSync(target, { recursive: true });
 
   for (const entry of readdirSync(source, { withFileTypes: true })) {
-    cpSync(join(source, entry.name), join(target, entry.name), {
-      recursive: true,
-      force: true
-    });
+    const sourcePath = join(source, entry.name);
+    const targetPath = join(target, entry.name);
+
+    if (entry.isDirectory()) {
+      copyDirectoryContents(sourcePath, targetPath);
+    } else {
+      cpSync(sourcePath, targetPath, { force: true });
+    }
   }
 }
