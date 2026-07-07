@@ -66,6 +66,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#itemManager" tabindex="0">itemManager</a></li>
 <li><a href="#chatManager" tabindex="0">chatManager</a></li>
 <li><a href="#gameManager" tabindex="0">gameManager</a></li>
+<li><a href="#eventManager" tabindex="0">eventManager</a></li>
 </ol>
 </li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
@@ -110,7 +111,7 @@ implements org.bukkit.event.Listener</span></div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>protected final <a href="../arena/managers/ArenaManager.html" title="class in dev.despical.tntrun.arena.managers">ArenaManager</a></code></div>
+<div class="col-first even-row-color"><code>protected final <a href="../arena/ArenaManager.html" title="class in dev.despical.tntrun.arena">ArenaManager</a></code></div>
 <div class="col-second even-row-color"><code><a href="#arenaManager" class="member-name-link">arenaManager</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>protected final <a href="../arena/ArenaRegistry.html" title="class in dev.despical.tntrun.arena">ArenaRegistry</a></code></div>
@@ -119,21 +120,24 @@ implements org.bukkit.event.Listener</span></div>
 <div class="col-first even-row-color"><code>protected final <a href="../chat/ChatManager.html" title="class in dev.despical.tntrun.chat">ChatManager</a></code></div>
 <div class="col-second even-row-color"><code><a href="#chatManager" class="member-name-link">chatManager</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>protected final <a href="../game/GameManager.html" title="class in dev.despical.tntrun.game">GameManager</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#gameManager" class="member-name-link">gameManager</a></code></div>
+<div class="col-first odd-row-color"><code>protected final <a href="../api/EventManager.html" title="class in dev.despical.tntrun.api">EventManager</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#eventManager" class="member-name-link">eventManager</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>protected final dev.despical.fileitems.ItemManager</code></div>
-<div class="col-second even-row-color"><code><a href="#itemManager" class="member-name-link">itemManager</a></code></div>
+<div class="col-first even-row-color"><code>protected final <a href="../game/GameManager.html" title="class in dev.despical.tntrun.game">GameManager</a></code></div>
+<div class="col-second even-row-color"><code><a href="#gameManager" class="member-name-link">gameManager</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>protected final <a href="../option/ConfigOptions.html" title="class in dev.despical.tntrun.option">ConfigOptions</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#options" class="member-name-link">options</a></code></div>
+<div class="col-first odd-row-color"><code>protected final dev.despical.fileitems.ItemManager</code></div>
+<div class="col-second odd-row-color"><code><a href="#itemManager" class="member-name-link">itemManager</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>protected static final <a href="../Main.html" title="class in dev.despical.tntrun">Main</a></code></div>
-<div class="col-second even-row-color"><code><a href="#plugin" class="member-name-link">plugin</a></code></div>
+<div class="col-first even-row-color"><code>protected final <a href="../option/ConfigOptions.html" title="class in dev.despical.tntrun.option">ConfigOptions</a></code></div>
+<div class="col-second even-row-color"><code><a href="#options" class="member-name-link">options</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>protected final <a href="../user/UserManager.html" title="class in dev.despical.tntrun.user">UserManager</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#userManager" class="member-name-link">userManager</a></code></div>
+<div class="col-first odd-row-color"><code>protected static final <a href="../Main.html" title="class in dev.despical.tntrun">Main</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#plugin" class="member-name-link">plugin</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>protected final <a href="../user/UserManager.html" title="class in dev.despical.tntrun.user">UserManager</a></code></div>
+<div class="col-second even-row-color"><code><a href="#userManager" class="member-name-link">userManager</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -188,7 +192,7 @@ implements org.bukkit.event.Listener</span></div>
 <section class="detail" id="arenaManager">
 <h3>arenaManager</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type"><a href="../arena/managers/ArenaManager.html" title="class in dev.despical.tntrun.arena.managers">ArenaManager</a></span>&nbsp;<span class="element-name">arenaManager</span></div>
+<div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type"><a href="../arena/ArenaManager.html" title="class in dev.despical.tntrun.arena">ArenaManager</a></span>&nbsp;<span class="element-name">arenaManager</span></div>
 </div>
 </section>
 </li>
@@ -229,6 +233,14 @@ implements org.bukkit.event.Listener</span></div>
 <h3>gameManager</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type"><a href="../game/GameManager.html" title="class in dev.despical.tntrun.game">GameManager</a></span>&nbsp;<span class="element-name">gameManager</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="eventManager">
+<h3>eventManager</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type"><a href="../api/EventManager.html" title="class in dev.despical.tntrun.api">EventManager</a></span>&nbsp;<span class="element-name">eventManager</span></div>
 </div>
 </section>
 </li>

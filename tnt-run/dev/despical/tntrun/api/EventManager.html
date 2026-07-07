@@ -72,7 +72,10 @@ loadScripts(document, 'script');</script>
 <li><a href="#gameStop(dev.despical.tntrun.game.Game,dev.despical.tntrun.game.StopReason)" tabindex="0">gameStop(Game, StopReason)</a></li>
 <li><a href="#gameStop(dev.despical.tntrun.game.Game,dev.despical.tntrun.game.StopReason,java.util.List)" tabindex="0">gameStop(Game, StopReason, List)</a></li>
 <li><a href="#playerJoinAttempt(org.bukkit.entity.Player,dev.despical.tntrun.game.Game)" tabindex="0">playerJoinAttempt(Player, Game)</a></li>
+<li><a href="#playerJoinAttempt(org.bukkit.entity.Player,dev.despical.tntrun.game.Game,boolean)" tabindex="0">playerJoinAttempt(Player, Game, boolean)</a></li>
 <li><a href="#playerLeave(org.bukkit.entity.Player,dev.despical.tntrun.game.Game,dev.despical.tntrun.api.event.player.PlayerLeaveGameEvent.LeaveReason)" tabindex="0">playerLeave(Player, Game, PlayerLeaveGameEvent.LeaveReason)</a></li>
+<li><a href="#playerDoubleJump(org.bukkit.entity.Player,dev.despical.tntrun.game.Game,int,double,org.bukkit.util.Vector)" tabindex="0">playerDoubleJump(Player, Game, int, double, Vector)</a></li>
+<li><a href="#playerEliminate(org.bukkit.entity.Player,dev.despical.tntrun.game.Game,int)" tabindex="0">playerEliminate(Player, Game, int)</a></li>
 <li><a href="#statChange(org.bukkit.entity.Player,dev.despical.tntrun.stats.StatisticType,T,T)" tabindex="0">statChange(Player, StatisticType, T, T)</a></li>
 </ol>
 </li>
@@ -146,27 +149,44 @@ loadScripts(document, 'script');</script>
  <a href="../game/StopReason.html" title="enum class in dev.despical.tntrun.game">StopReason</a>&nbsp;reason,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&gt;&nbsp;stoppedPlayers)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="event/player/PlayerDoubleJumpEvent.html" title="class in dev.despical.tntrun.api.event.player">PlayerDoubleJumpEvent</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#playerDoubleJump(org.bukkit.entity.Player,dev.despical.tntrun.game.Game,int,double,org.bukkit.util.Vector)" class="member-name-link">playerDoubleJump</a><wbr>(org.bukkit.entity.Player&nbsp;player,
+ <a href="../game/Game.html" title="class in dev.despical.tntrun.game">Game</a>&nbsp;game,
+ int&nbsp;jumpsLeft,
+ double&nbsp;cooldownSeconds,
+ org.bukkit.util.Vector&nbsp;velocity)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#playerEliminate(org.bukkit.entity.Player,dev.despical.tntrun.game.Game,int)" class="member-name-link">playerEliminate</a><wbr>(org.bukkit.entity.Player&nbsp;player,
+ <a href="../game/Game.html" title="class in dev.despical.tntrun.game">Game</a>&nbsp;game,
+ int&nbsp;playersLeft)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="event/player/PlayerJoinAttemptEvent.html" title="class in dev.despical.tntrun.api.event.player">PlayerJoinAttemptEvent</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#playerJoinAttempt(org.bukkit.entity.Player,dev.despical.tntrun.game.Game)" class="member-name-link">playerJoinAttempt</a><wbr>(org.bukkit.entity.Player&nbsp;player,
  <a href="../game/Game.html" title="class in dev.despical.tntrun.game">Game</a>&nbsp;game)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#playerLeave(org.bukkit.entity.Player,dev.despical.tntrun.game.Game,dev.despical.tntrun.api.event.player.PlayerLeaveGameEvent.LeaveReason)" class="member-name-link">playerLeave</a><wbr>(org.bukkit.entity.Player&nbsp;player,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="event/player/PlayerJoinAttemptEvent.html" title="class in dev.despical.tntrun.api.event.player">PlayerJoinAttemptEvent</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#playerJoinAttempt(org.bukkit.entity.Player,dev.despical.tntrun.game.Game,boolean)" class="member-name-link">playerJoinAttempt</a><wbr>(org.bukkit.entity.Player&nbsp;player,
  <a href="../game/Game.html" title="class in dev.despical.tntrun.game">Game</a>&nbsp;game,
- <a href="event/player/PlayerLeaveGameEvent.LeaveReason.html" title="enum class in dev.despical.tntrun.api.event.player">PlayerLeaveGameEvent.LeaveReason</a>&nbsp;reason)</code></div>
+ boolean&nbsp;spectatorJoin)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#reload()" class="member-name-link">reload</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#playerLeave(org.bukkit.entity.Player,dev.despical.tntrun.game.Game,dev.despical.tntrun.api.event.player.PlayerLeaveGameEvent.LeaveReason)" class="member-name-link">playerLeave</a><wbr>(org.bukkit.entity.Player&nbsp;player,
+ <a href="../game/Game.html" title="class in dev.despical.tntrun.game">Game</a>&nbsp;game,
+ <a href="event/player/PlayerLeaveGameEvent.LeaveReason.html" title="enum class in dev.despical.tntrun.api.event.player">PlayerLeaveGameEvent.LeaveReason</a>&nbsp;reason)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendTimingsReport(org.bukkit.command.CommandSender)" class="member-name-link">sendTimingsReport</a><wbr>(org.bukkit.command.CommandSender&nbsp;sender)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#reload()" class="member-name-link">reload</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T&gt;&nbsp;<a href="event/player/PlayerStatisticChangeEvent.html" title="class in dev.despical.tntrun.api.event.player">PlayerStatisticChangeEvent</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#statChange(org.bukkit.entity.Player,dev.despical.tntrun.stats.StatisticType,T,T)" class="member-name-link">statChange</a><wbr>(org.bukkit.entity.Player&nbsp;player,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendTimingsReport(org.bukkit.command.CommandSender)" class="member-name-link">sendTimingsReport</a><wbr>(org.bukkit.command.CommandSender&nbsp;sender)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T&gt;&nbsp;<a href="event/player/PlayerStatisticChangeEvent.html" title="class in dev.despical.tntrun.api.event.player">PlayerStatisticChangeEvent</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#statChange(org.bukkit.entity.Player,dev.despical.tntrun.stats.StatisticType,T,T)" class="member-name-link">statChange</a><wbr>(org.bukkit.entity.Player&nbsp;player,
  <a href="../stats/StatisticType.html" title="class in dev.despical.tntrun.stats">StatisticType</a>&lt;T&gt;&nbsp;stat,
  T&nbsp;oldValue,
  T&nbsp;newValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -288,12 +308,44 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="playerJoinAttempt(org.bukkit.entity.Player,dev.despical.tntrun.game.Game,boolean)">
+<h3>playerJoinAttempt</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="event/player/PlayerJoinAttemptEvent.html" title="class in dev.despical.tntrun.api.event.player">PlayerJoinAttemptEvent</a></span>&nbsp;<span class="element-name">playerJoinAttempt</span><wbr><span class="parameters">(org.bukkit.entity.Player&nbsp;player,
+ <a href="../game/Game.html" title="class in dev.despical.tntrun.game">Game</a>&nbsp;game,
+ boolean&nbsp;spectatorJoin)</span></div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="playerLeave(org.bukkit.entity.Player,dev.despical.tntrun.game.Game,dev.despical.tntrun.api.event.player.PlayerLeaveGameEvent.LeaveReason)">
 <h3>playerLeave</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">playerLeave</span><wbr><span class="parameters">(org.bukkit.entity.Player&nbsp;player,
  <a href="../game/Game.html" title="class in dev.despical.tntrun.game">Game</a>&nbsp;game,
  <a href="event/player/PlayerLeaveGameEvent.LeaveReason.html" title="enum class in dev.despical.tntrun.api.event.player">PlayerLeaveGameEvent.LeaveReason</a>&nbsp;reason)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="playerDoubleJump(org.bukkit.entity.Player,dev.despical.tntrun.game.Game,int,double,org.bukkit.util.Vector)">
+<h3>playerDoubleJump</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="event/player/PlayerDoubleJumpEvent.html" title="class in dev.despical.tntrun.api.event.player">PlayerDoubleJumpEvent</a></span>&nbsp;<span class="element-name">playerDoubleJump</span><wbr><span class="parameters">(org.bukkit.entity.Player&nbsp;player,
+ <a href="../game/Game.html" title="class in dev.despical.tntrun.game">Game</a>&nbsp;game,
+ int&nbsp;jumpsLeft,
+ double&nbsp;cooldownSeconds,
+ org.bukkit.util.Vector&nbsp;velocity)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="playerEliminate(org.bukkit.entity.Player,dev.despical.tntrun.game.Game,int)">
+<h3>playerEliminate</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">playerEliminate</span><wbr><span class="parameters">(org.bukkit.entity.Player&nbsp;player,
+ <a href="../game/Game.html" title="class in dev.despical.tntrun.game">Game</a>&nbsp;game,
+ int&nbsp;playersLeft)</span></div>
 </div>
 </section>
 </li>
