@@ -1,0 +1,9 @@
+dev.despical.inventoryframework
+dev.despical.inventoryframework.exception
+dev.despical.inventoryframework.font
+dev.despical.inventoryframework.font.util
+dev.despical.inventoryframework.pane
+dev.despical.inventoryframework.pane.component
+dev.despical.inventoryframework.pane.component.util
+dev.despical.inventoryframework.pane.util
+dev.despical.inventoryframework.util

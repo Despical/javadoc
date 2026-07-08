@@ -1,0 +1,15 @@
+dev.despical.commons.configuration
+dev.despical.commons.database
+dev.despical.commons.engine
+dev.despical.commons.file
+dev.despical.commons.item
+dev.despical.commons.miscellaneous
+dev.despical.commons.number
+dev.despical.commons.scoreboard
+dev.despical.commons.scoreboard.common
+dev.despical.commons.scoreboard.common.animation
+dev.despical.commons.serializer
+dev.despical.commons.sorter
+dev.despical.commons.string
+dev.despical.commons.util
+dev.despical.commons.util.conversation

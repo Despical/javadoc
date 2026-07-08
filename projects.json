@@ -18,5 +18,23 @@
     "title": "SpigotSalesWebhook",
     "repo": "https://github.com/Despical/SpigotSalesWebhook.git",
     "branch": "javadoc"
+  },
+  {
+    "slug": "commons",
+    "title": "Commons",
+    "repo": "https://github.com/Despical/Commons.git",
+    "branch": "javadoc"
+  },
+  {
+    "slug": "inventory-framework",
+    "title": "InventoryFramework",
+    "repo": "https://github.com/Despical/InventoryFramework.git",
+    "branch": "javadoc"
+  },
+  {
+    "slug": "file-items",
+    "title": "FileItems",
+    "repo": "https://github.com/Despical/FileItems.git",
+    "branch": "javadoc"
   }
 ]

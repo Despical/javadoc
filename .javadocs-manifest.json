@@ -2,6 +2,9 @@
   "slugs": [
     "tnt-run",
     "command-framework",
-    "spigot-sales-webhook"
+    "spigot-sales-webhook",
+    "commons",
+    "inventory-framework",
+    "file-items"
   ]
 }

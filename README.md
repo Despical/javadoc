@@ -10,6 +10,9 @@ Central website for generated API documentation for Despical's open source proje
 * [TNTRun](https://javadoc.despical.dev/tnt-run/)
 * [CommandFramework](https://javadoc.despical.dev/command-framework/)
 * [SpigotSalesWebhook](https://javadoc.despical.dev/spigot-sales-webhook/)
+* [Commons](https://javadoc.despical.dev/commons/)
+* [InventoryFramework](https://javadoc.despical.dev/inventory-framework/)
+* [FileItems](https://javadoc.despical.dev/file-items/)
 
 ---
 
