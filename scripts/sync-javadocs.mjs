@@ -43,7 +43,7 @@ for (const project of projects) {
 writeFileSync(join(siteDir, "index.html"), renderIndex(projects));
 
 function validateProject(project) {
-    const missing = ["slug", "title", "repo", "spigot", "branch"].filter((key) => !project[key]);
+    const missing = ["slug", "title", "repo", "branch"].filter((key) => !project[key]);
     if (missing.length > 0) {
         throw new Error(`Invalid project entry. Missing: ${missing.join(", ")}`);
     }
@@ -56,10 +56,10 @@ function renderIndex(projects) {
         <div class="project-links">
           <a class="icon-link footer-link-icon" href="${escapeHtml(project.repo.replace(/\.git$/, ""))}" target="_blank" aria-label="${escapeHtml(project.title)} on GitHub" title="GitHub">
             <img src="./assets/icons/github.svg" alt="" width="20" height="20">
-          </a>
+          </a>${project.spigot ? `
           <a class="icon-link footer-link-icon" href="${escapeHtml(project.spigot)}" target="_blank" aria-label="${escapeHtml(project.title)} on SpigotMC" title="SpigotMC">
             <img src="./assets/icons/spigot.svg" alt="" width="20" height="20">
-          </a>
+          </a>` : ""}
         </div>
       </li>`).join("");
 

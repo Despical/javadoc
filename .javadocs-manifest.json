@@ -1,6 +1,7 @@
 {
   "slugs": [
     "tnt-run",
-    "command-framework"
+    "command-framework",
+    "spigot-sales-webhook"
   ]
 }

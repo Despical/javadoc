@@ -12,5 +12,11 @@
     "repo": "https://github.com/Despical/CommandFramework.git",
     "spigot": "https://www.spigotmc.org/resources/command-framework-1-7-26-2.89933/",
     "branch": "javadoc"
+  },
+  {
+    "slug": "spigot-sales-webhook",
+    "title": "SpigotSalesWebhook",
+    "repo": "https://github.com/Despical/SpigotSalesWebhook.git",
+    "branch": "javadoc"
   }
 ]
