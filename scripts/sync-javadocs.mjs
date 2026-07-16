@@ -59,6 +59,9 @@ function renderIndex(projects) {
           </a>${project.spigot ? `
           <a class="icon-link footer-link-icon" href="${escapeHtml(project.spigot)}" target="_blank" aria-label="${escapeHtml(project.title)} on SpigotMC" title="SpigotMC">
             <img src="./assets/icons/spigot.svg" alt="" width="20" height="20">
+          </a>` : ""}${project.builtbybit ? `
+          <a class="icon-link footer-link-icon" href="${escapeHtml(project.builtbybit)}" target="_blank" aria-label="${escapeHtml(project.title)} on BuiltByBit" title="BuiltByBit">
+            <img src="./assets/icons/builtbybit.svg" alt="" width="20" height="20">
           </a>` : ""}
         </div>
       </li>`).join("");
