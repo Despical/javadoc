@@ -8,6 +8,7 @@ Central website for generated API documentation for Despical's open source proje
 ## Projects
 
 * [TNTRun](https://javadoc.despical.dev/tnt-run/)
+* [WhackMe](https://javadoc.despical.dev/whack-me/)
 * [CommandFramework](https://javadoc.despical.dev/command-framework/)
 * [SpigotSalesWebhook](https://javadoc.despical.dev/spigot-sales-webhook/)
 * [Commons](https://javadoc.despical.dev/commons/)
