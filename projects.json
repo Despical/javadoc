@@ -4,6 +4,15 @@
     "title": "TNTRun",
     "repo": "https://github.com/Despical/TNTRun.git",
     "spigot": "https://www.spigotmc.org/resources/tnt-run-1-9-1-21-5.83196/",
+    "builtbybit": "https://builtbybit.com/resources/tnt-run.116706/",
+    "branch": "javadoc"
+  },
+  {
+    "slug": "whack-me",
+    "title": "WhackMe",
+    "repo": "https://github.com/Despical/WhackMe.git",
+    "spigot": "https://www.spigotmc.org/resources/whack-me-1-21-11-26-2.104912/",
+    "builtbybit": "https://builtbybit.com/resources/whack-me.50294/",
     "branch": "javadoc"
   },
   {
