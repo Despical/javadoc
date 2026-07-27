@@ -16,6 +16,12 @@
     "branch": "javadoc"
   },
   {
+    "slug": "kotl",
+    "title": "KOTL",
+    "repo": "https://github.com/Despical/KOTL.git",
+    "branch": "javadoc"
+  },
+  {
     "slug": "command-framework",
     "title": "CommandFramework",
     "repo": "https://github.com/Despical/CommandFramework.git",
