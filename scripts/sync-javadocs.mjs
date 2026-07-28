@@ -114,7 +114,7 @@ function renderIndex(projects) {
 
     main {
       width: min(940px, calc(100vw - 40px));
-      padding: 56px 0;
+      padding: 12px 0;
     }
 
     h1 {
@@ -271,7 +271,7 @@ function renderIndex(projects) {
     @media (max-width: 640px) {
       main {
         width: min(940px, calc(100% - 24px));
-        padding: 36px 0;
+        padding: 12px 0;
       }
 
       li,
