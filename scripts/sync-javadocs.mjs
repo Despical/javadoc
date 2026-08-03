@@ -114,7 +114,7 @@ function renderIndex(projects) {
 
     main {
       width: min(940px, calc(100vw - 40px));
-      padding: 12px 0;
+      padding: 120px 0 12px;
     }
 
     h1 {
@@ -271,7 +271,7 @@ function renderIndex(projects) {
     @media (max-width: 640px) {
       main {
         width: min(940px, calc(100% - 24px));
-        padding: 12px 0;
+        padding: 32px 0 12px;
       }
 
       li,
@@ -355,7 +355,7 @@ function renderIndex(projects) {
 <body>
   <main>
     <h1>Despical's Javadocs</h1>
-    <p>Generated API documentation for Despical's open source projects.</p>
+    <p>Generated API documentation for Despical's open-source Java projects.</p>
     <ul>${links}
     </ul>
     <footer class="site-footer">
