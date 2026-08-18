@@ -4,8 +4,7 @@
     "title": "TNTRun",
     "repo": "https://github.com/Despical/TNTRun.git",
     "spigot": "https://www.spigotmc.org/resources/tnt-run-1-9-1-21-5.83196/",
-    "builtbybit": "https://builtbybit.com/resources/tnt-run.116706/",
-    "branch": "javadoc"
+    "builtbybit": "https://builtbybit.com/resources/tnt-run.116706/"
   },
   {
     "slug": "whack-me",
@@ -20,8 +19,7 @@
     "title": "KOTL",
     "repo": "https://github.com/Despical/KOTL.git",
     "spigot": "https://www.spigotmc.org/resources/king-of-the-ladder-1-8-1-21-11.80686/",
-    "builtbybit": "https://builtbybit.com/resources/king-of-the-ladder.51128/",
-    "branch": "javadoc"
+    "builtbybit": "https://builtbybit.com/resources/king-of-the-ladder.51128/"
   },
   {
     "slug": "command-framework",
@@ -53,5 +51,10 @@
     "title": "FileItems",
     "repo": "https://github.com/Despical/FileItems.git",
     "branch": "javadoc"
+  },
+  {
+    "slug": "particle-text",
+    "title": "ParticleText",
+    "repo": "https://github.com/Despical/ParticleText.git"
   }
 ]

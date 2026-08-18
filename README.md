@@ -15,6 +15,7 @@ Central website for generated API documentation for Despical's open source proje
 * [Commons](https://javadoc.despical.dev/commons/)
 * [InventoryFramework](https://javadoc.despical.dev/inventory-framework/)
 * [FileItems](https://javadoc.despical.dev/file-items/)
+* [ParticleText](https://javadoc.despical.dev/particle-text/)
 
 ---
 
@@ -27,8 +28,9 @@ node scripts/sync-javadocs.mjs
 node scripts/publish-root.mjs
 ```
 
-- `sync-javadocs.mjs` reads `projects.json`, clones each configured project's
-  `javadoc` branch, and generates the site into `public/`.
+- `sync-javadocs.mjs` reads `projects.json`, clones each configured project
+  branch or uses its committed Javadocs when no branch is set, and generates
+  the site into `public/`.
 
 - `publish-root.mjs` copies the generated site files from `public/` into the
   GitHub Pages root, including `index.html`, project directories, `CNAME`, and

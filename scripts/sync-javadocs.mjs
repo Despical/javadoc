@@ -16,34 +16,46 @@ cpSync(join(root, "favicon.svg"), join(siteDir, "favicon.svg"), {force: true});
 for (const project of projects) {
     validateProject(project);
 
-    const tempDir = join(tmpdir(), `javadoc-${project.slug}-${Date.now()}`);
     const targetDir = join(siteDir, project.slug);
 
-    console.log(`Cloning ${project.repo}#${project.branch}`);
-    execFileSync("git", [
-        "clone",
-        "--depth",
-        "1",
-        "--branch",
-        project.branch,
-        project.repo,
-        tempDir
-    ], {stdio: "inherit"});
+    if (project.branch) {
+        const tempDir = join(tmpdir(), `javadoc-${project.slug}-${Date.now()}`);
 
-    mkdirSync(targetDir, {recursive: true});
-    copyDirectoryContents(tempDir, targetDir, [".git", ".github", "CNAME"]);
+        console.log(`Cloning ${project.repo}#${project.branch}`);
+        execFileSync("git", [
+            "clone",
+            "--depth",
+            "1",
+            "--branch",
+            project.branch,
+            project.repo,
+            tempDir
+        ], {stdio: "inherit"});
 
-    rmSync(tempDir, {recursive: true, force: true});
+        mkdirSync(targetDir, {recursive: true});
+        copyDirectoryContents(tempDir, targetDir, [".git", ".github", "CNAME"]);
+
+        rmSync(tempDir, {recursive: true, force: true});
+    } else {
+        const sourceDir = join(root, project.slug);
+
+        if (!existsSync(join(sourceDir, "index.html"))) {
+            throw new Error(`${project.slug} did not contain a committed index.html`);
+        }
+
+        console.log(`Using committed Javadocs for ${project.slug}`);
+        copyDirectoryContents(sourceDir, targetDir);
+    }
 
     if (!existsSync(join(targetDir, "index.html"))) {
-        throw new Error(`${project.slug} did not contain an index.html in ${project.branch}`);
+        throw new Error(`${project.slug} did not contain an index.html after synchronization`);
     }
 }
 
 writeFileSync(join(siteDir, "index.html"), renderIndex(projects));
 
 function validateProject(project) {
-    const missing = ["slug", "title", "repo", "branch"].filter((key) => !project[key]);
+    const missing = ["slug", "title", "repo"].filter((key) => !project[key]);
     if (missing.length > 0) {
         throw new Error(`Invalid project entry. Missing: ${missing.join(", ")}`);
     }
