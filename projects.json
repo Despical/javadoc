@@ -55,6 +55,8 @@
   {
     "slug": "particle-text",
     "title": "ParticleText",
-    "repo": "https://github.com/Despical/ParticleText.git"
+    "repo": "https://github.com/Despical/ParticleText.git",
+    "spigot": "https://www.spigotmc.org/resources/particle-text.110996/",
+    "builtbybit": "https://builtbybit.com/resources/particle-text.50324/"
   }
 ]
