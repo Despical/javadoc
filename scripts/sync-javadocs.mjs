@@ -280,6 +280,51 @@ function renderIndex(projects) {
       color: var(--ink);
     }
 
+    .back-to-top {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 10;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      padding: 0;
+      border: 1px solid rgba(124, 199, 255, 0.38);
+      border-radius: 999px;
+      color: var(--ink);
+      background: rgba(27, 31, 37, 0.9);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.32);
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(16px) scale(0.92);
+      transition: opacity 180ms ease, transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+    }
+
+    .back-to-top.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0) scale(1);
+    }
+
+    .back-to-top:hover {
+      border-color: var(--accent);
+      background: #252d36;
+      transform: translateY(-2px);
+    }
+
+    .back-to-top:focus-visible {
+      outline: 3px solid rgba(124, 199, 255, 0.44);
+      outline-offset: 3px;
+    }
+
+    .back-to-top svg {
+      width: 22px;
+      height: 22px;
+    }
+
     @media (max-width: 640px) {
       main {
         width: min(940px, calc(100% - 24px));
@@ -354,6 +399,23 @@ function renderIndex(projects) {
       .footer-links .footer-link-icon:first-child {
         grid-column: 1 / -1;
       }
+
+      .back-to-top {
+        right: 16px;
+        bottom: 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
     }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5EBQ47EQRX"></script>
@@ -394,6 +456,11 @@ function renderIndex(projects) {
       </div>
     </footer>
   </main>
+  <button class="back-to-top" type="button" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4">
+      <path d="M12 19V5M5 12l7-7 7 7"></path>
+    </svg>
+  </button>
   <script>
     for (const card of document.querySelectorAll("[data-href]")) {
       card.addEventListener("click", (event) => {
@@ -404,6 +471,17 @@ function renderIndex(projects) {
         window.location.href = card.dataset.href;
       });
     }
+
+    const backToTop = document.querySelector(".back-to-top");
+    const updateBackToTop = () => {
+      backToTop.classList.toggle("is-visible", window.scrollY > 480);
+    };
+
+    window.addEventListener("scroll", updateBackToTop, {passive: true});
+    updateBackToTop();
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({top: 0, behavior: "smooth"});
+    });
   </script>
 </body>
 </html>
