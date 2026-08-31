@@ -1,0 +1,10 @@
+# Keep text files deterministic across Windows and CI environments.
+* text=auto eol=lf
+
+# Keep binary assets out of text normalization.
+*.gif binary
+*.ico binary
+*.jpeg binary
+*.jpg binary
+*.png binary
+*.jar binary
