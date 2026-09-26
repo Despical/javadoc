@@ -26,7 +26,7 @@ for (const slug of currentSlugs) {
     copyDirectoryContents(source, target);
 }
 
-for (const file of ["index.html", ".nojekyll", "CNAME", "favicon.svg"]) {
+for (const file of ["index.html", ".nojekyll", "CNAME", "favicon.svg", "robots.txt", "sitemap.xml"]) {
     const target = join(root, file);
     rmSync(target, {force: true});
     cpSync(join(publicDir, file), target, {force: true});

@@ -1,11 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
-  <title>Despical Javadocs</title>
-  <defs>
-    <linearGradient id="background" x1="10" y1="8" x2="56" y2="58" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#55B8FF"/>
-      <stop offset="1" stop-color="#6E6CFF"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="16" fill="url(#background)"/>
-  <path d="M39 15V40.5C39 48.5 33.7 53 26.5 53C20.6 53 16.5 49.9 14 45.3L20.5 41.4C21.7 44 23.8 45.6 26.5 45.6C30.5 45.6 32.5 43.3 32.5 39.6V15H39Z" fill="#F7FBFF"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><title>Despical Javadocs</title><rect width="64" height="64" rx="14" fill="#252525"/><g fill="none" stroke="#ededed" stroke-width="3.5" stroke-linecap="square" stroke-linejoin="miter"><path d="M20 16H10v32h10M44 16h10v32H44M35 21l-6 22"/></g></svg>

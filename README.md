@@ -36,7 +36,17 @@ node scripts/publish-root.mjs
   GitHub Pages root, including `index.html`, project directories, `CNAME`, and
   `favicon.svg`.
 
-To preview local changes, open `index.html` in a browser after regenerating it.
+For homepage-only changes, run `node scripts/build-home.mjs`. This updates the
+root and `public/` homepage without fetching or replacing any project documentation.
+Edit `scripts/homepage.html`, `assets/home.css`, and `assets/home.js` for the design;
+project descriptions, categories, and display order live in `projects.json`.
+The builders also refresh `sitemap.xml` and `robots.txt` from the actual documentation
+pages. Redirect entrypoints and duplicate class-use/navigation indexes are omitted.
+`assets/code-examples.js` contains the hero examples and their source references;
+`assets/social-icon.png` is the square sharing image based on `favicon.svg`.
+
+Serve the repository with `python -m http.server 4180 --bind 127.0.0.1` and open
+`http://127.0.0.1:4180/` to preview the homepage and the existing API references.
 
 ---
 

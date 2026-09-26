@@ -4,7 +4,13 @@
     "title": "TNTRun",
     "repo": "https://github.com/Despical/TNTRun.git",
     "spigot": "https://www.spigotmc.org/resources/tnt-run-1-9-1-21-5.83196/",
-    "builtbybit": "https://builtbybit.com/resources/tnt-run.116706/"
+    "builtbybit": "https://builtbybit.com/resources/tnt-run.116706/",
+    "category": "Plugins",
+    "description": "A survival minigame played across floors of disappearing blocks. Integrate with arena management, game lifecycle events, player statistics, records, and spectator systems.",
+    "monogram": "Tr",
+    "order": 6,
+    "icon": "./assets/projects/tnt-run.svg",
+    "modrinth": "https://modrinth.com/plugin/tnt-run-minigame"
   },
   {
     "slug": "whack-me",
@@ -12,51 +18,88 @@
     "repo": "https://github.com/Despical/WhackMe.git",
     "spigot": "https://www.spigotmc.org/resources/whack-me-1-21-11-26-2.104912/",
     "builtbybit": "https://builtbybit.com/resources/whack-me.50294/",
-    "branch": "javadoc"
+    "branch": "javadoc",
+    "category": "Plugins",
+    "description": "A single-player whack-a-block minigame with timed rounds, scoring, and hit streaks. Extend arena behavior and listen for game, player, and statistic events through its public API.",
+    "monogram": "Wm",
+    "order": 7,
+    "icon": "./assets/projects/whack-me.svg",
+    "modrinth": "https://modrinth.com/plugin/whack-me"
   },
   {
     "slug": "kotl",
     "title": "KOTL",
     "repo": "https://github.com/Despical/KOTL.git",
     "spigot": "https://www.spigotmc.org/resources/king-of-the-ladder-1-8-1-21-11.80686/",
-    "builtbybit": "https://builtbybit.com/resources/king-of-the-ladder.51128/"
+    "builtbybit": "https://builtbybit.com/resources/king-of-the-ladder.51128/",
+    "category": "Plugins",
+    "description": "A competitive minigame about reaching the top and holding the crown. Work with configurable arenas, king changes, player statistics, per-arena records, and leaderboard integrations.",
+    "monogram": "Kl",
+    "order": 8,
+    "icon": "./assets/projects/kotl.svg"
   },
   {
     "slug": "command-framework",
     "title": "CommandFramework",
     "repo": "https://github.com/Despical/CommandFramework.git",
     "spigot": "https://www.spigotmc.org/resources/command-framework-1-7-26-2.89933/",
-    "branch": "javadoc"
+    "branch": "javadoc",
+    "category": "Frameworks",
+    "description": "Define commands directly in Java with annotations. Handle aliases, permissions, subcommands, tab completion, cooldowns, and custom arguments without registering commands in plugin.yml.",
+    "monogram": ">_",
+    "order": 2,
+    "icon": "./assets/projects/command-framework.svg"
   },
   {
     "slug": "spigot-sales-webhook",
     "title": "SpigotSalesWebhook",
     "repo": "https://github.com/Despical/SpigotSalesWebhook.git",
-    "branch": "javadoc"
+    "branch": "javadoc",
+    "category": "Tools",
+    "description": "A self-hosted Java worker that checks SpigotMC buyer lists and sends new-sale notifications to Discord. Includes configurable scans, purchase filtering, and persistent buyer tracking.",
+    "monogram": "↗",
+    "order": 9,
+    "icon": "./assets/projects/spigot-sales-webhook.svg"
   },
   {
     "slug": "commons",
     "title": "Commons",
     "repo": "https://github.com/Despical/Commons.git",
-    "branch": "javadoc"
+    "branch": "javadoc",
+    "category": "Libraries",
+    "description": "A shared toolkit for Java applications and Minecraft plugins. Work with strings, numbers, collections, files, item builders, serialization, and scoreboard utilities.",
+    "monogram": "Co",
+    "order": 1
   },
   {
     "slug": "inventory-framework",
     "title": "InventoryFramework",
     "repo": "https://github.com/Despical/InventoryFramework.git",
-    "branch": "javadoc"
+    "branch": "javadoc",
+    "category": "Frameworks",
+    "description": "Build Minecraft inventory interfaces from reusable panes or XML layouts. Combine positioned items, paginated menus, interactive components, and click handlers in one GUI.",
+    "monogram": "IF",
+    "order": 3
   },
   {
     "slug": "file-items",
     "title": "FileItems",
     "repo": "https://github.com/Despical/FileItems.git",
-    "branch": "javadoc"
+    "branch": "javadoc",
+    "category": "Libraries",
+    "description": "Load configurable Minecraft items from YAML files. Customize names, lore, amounts, glowing effects, durability, item flags, and your own keys through a lightweight Java API.",
+    "monogram": "Fi",
+    "order": 4
   },
   {
     "slug": "particle-text",
     "title": "ParticleText",
     "repo": "https://github.com/Despical/ParticleText.git",
     "spigot": "https://www.spigotmc.org/resources/particle-text.110996/",
-    "builtbybit": "https://builtbybit.com/resources/particle-text.50324/"
+    "builtbybit": "https://builtbybit.com/resources/particle-text.50324/",
+    "category": "Libraries",
+    "description": "Render customizable text with Minecraft particles. Adjust fonts, scale, rotation, and placement, with cached rendering, viewer distance limits, and PlaceholderAPI support.",
+    "monogram": "Pt",
+    "order": 5
   }
 ]
