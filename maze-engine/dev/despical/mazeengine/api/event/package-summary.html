@@ -63,6 +63,27 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="horizontal-scroll">
 <div class="package-signature">package <span class="element-name">dev.despical.mazeengine.api.event</span></div>
+<section class="package-description" id="package-description">
+<div class="block">Bukkit events reporting the terminal outcome of accepted maze operations.
+<p>
+<a href="MazeOperationCompletedEvent.html" title="class in dev.despical.mazeengine.api.event"><code>MazeOperationCompletedEvent</code></a> reports
+successful world work after final persistence or record removal and release
+of the operation's name reservation.
+<a href="MazeOperationFailedEvent.html" title="class in dev.despical.mazeengine.api.event"><code>MazeOperationFailedEvent</code></a> reports
+failures and cancellation with the operation identity, underlying cause,
+and last known maze description when one exists.
+<p>
+MazeEngine dispatches these events synchronously on the server thread for
+both command and API operations. They are outcome notifications and cannot
+be cancelled. Request validation that rejects submission before a handle is
+accepted does not produce an operation outcome event.
+<p>
+Listeners may retain immutable results and maze descriptions for menus,
+statistics, or audit records. A successful deletion retains a description
+with <a href="../model/MazeSnapshot.Status.html#DELETED"><code>MazeSnapshot.Status.DELETED</code></a>
+even though the registry no longer contains the record. Failure or
+cancellation does not guarantee that changed world blocks were restored.</div>
+</section>
 </div>
 <section class="summary">
 <ul class="summary-list">
@@ -77,11 +98,17 @@ loadScripts(document, 'script');</script>
 <div class="block">Public contracts for integrating other Bukkit plugins with MazeEngine.</div>
 </div>
 <div class="col-first odd-row-color"><a href="../model/package-summary.html">dev.despical.mazeengine.api.model</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Immutable values describing maze identity, coordinates, geometry, and metadata.</div>
+</div>
 <div class="col-first even-row-color"><a href="../operation/package-summary.html">dev.despical.mazeengine.api.operation</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Handles, progress samples, and results for accepted world-editing operations.</div>
+</div>
 <div class="col-first odd-row-color"><a href="../request/package-summary.html">dev.despical.mazeengine.api.request</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Immutable request values for submitting maze creation with preset overrides.</div>
+</div>
 </div>
 </div>
 </li>

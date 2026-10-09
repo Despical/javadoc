@@ -63,6 +63,20 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="horizontal-scroll">
 <div class="package-signature">package <span class="element-name">dev.despical.musicbot.audio</span></div>
+<section class="package-description" id="package-description">
+<div class="block">Guild-scoped audio playback, queue management, and Discord notifications.
+
+<p><a href="MusicService.html" title="class in dev.despical.musicbot.audio"><code>MusicService</code></a> resolves playable sources,
+manages voice connections, and exposes playback controls and queue snapshots.
+Each <a href="GuildAudioManager.html" title="class in dev.despical.musicbot.audio"><code>GuildAudioManager</code></a> owns a LavaPlayer
+player, a <a href="TrackScheduler.html" title="class in dev.despical.musicbot.audio"><code>TrackScheduler</code></a>, and an
+<a href="AudioPlayerSendHandler.html" title="class in dev.despical.musicbot.audio"><code>AudioPlayerSendHandler</code></a> that supplies Opus
+frames to JDA.</p>
+
+<p>Playback metadata preserves requester and source information. Scheduler
+events update recent playback history and notify the service when tracks
+start or end.</p></div>
+</section>
 </div>
 <section class="summary">
 <ul class="summary-list">
@@ -73,17 +87,29 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Package</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><a href="../package-summary.html">dev.despical.musicbot</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Application bootstrap and service wiring for MusicBot.</div>
+</div>
 <div class="col-first odd-row-color"><a href="../config/package-summary.html">dev.despical.musicbot.config</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Startup configuration loaded from dotenv and environment variables.</div>
+</div>
 <div class="col-first even-row-color"><a href="../i18n/package-summary.html">dev.despical.musicbot.i18n</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Turkish and English translations for guild-specific bot responses.</div>
+</div>
 <div class="col-first odd-row-color"><a href="../listener/package-summary.html">dev.despical.musicbot.listener</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Discord event handling and user interaction flows for the music bot.</div>
+</div>
 <div class="col-first even-row-color"><a href="../persistence/package-summary.html">dev.despical.musicbot.persistence</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Local JSON persistence for guild language preferences and playback history.</div>
+</div>
 <div class="col-first odd-row-color"><a href="../spotify/package-summary.html">dev.despical.musicbot.spotify</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Spotify link resolution into metadata and playable search queries.</div>
+</div>
 </div>
 </div>
 </li>

@@ -63,6 +63,30 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="horizontal-scroll">
 <div class="package-signature">package <span class="element-name">dev.despical.mazeengine.api.operation</span></div>
+<section class="package-description" id="package-description">
+<div class="block">Handles, progress samples, and results for accepted world-editing operations.
+<p>
+<a href="../MazeOperations.html" title="interface in dev.despical.mazeengine.api"><code>MazeOperations</code></a> returns a
+<a href="MazeOperation.html" title="interface in dev.despical.mazeengine.api.operation"><code>MazeOperation</code></a> after accepting
+creation, regeneration, repair, or deletion. Each handle has a unique UUID
+independent of the target maze name and retains its terminal state even when
+that name is later reused. <a href="OperationKind.html" title="enum class in dev.despical.mazeengine.api.operation"><code>OperationKind</code></a>
+identifies the requested action throughout its lifecycle.
+<p>
+Query progress and request cancellation on the server thread.
+<a href="OperationProgress.html" title="class in dev.despical.mazeengine.api.operation"><code>OperationProgress</code></a> is an immutable
+sample; its state is the lifecycle contract, while stage text and percentage
+describe the current internal step. Observe the completion stage without
+blocking the server thread, and schedule Bukkit work explicitly when a
+callback may run on another thread.
+<p>
+Successful completion publishes an immutable
+<a href="OperationResult.html" title="class in dev.despical.mazeengine.api.operation"><code>OperationResult</code></a> after final
+persistence or record removal and reservation release. Failure and cancellation
+complete the stage exceptionally and may leave partially changed blocks.
+Cancelling a future derived from the completion stage does not stop world
+work; use the handle's cancellation method to request it.</div>
+</section>
 </div>
 <section class="summary">
 <ul class="summary-list">
@@ -77,11 +101,17 @@ loadScripts(document, 'script');</script>
 <div class="block">Public contracts for integrating other Bukkit plugins with MazeEngine.</div>
 </div>
 <div class="col-first odd-row-color"><a href="../event/package-summary.html">dev.despical.mazeengine.api.event</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Bukkit events reporting the terminal outcome of accepted maze operations.</div>
+</div>
 <div class="col-first even-row-color"><a href="../model/package-summary.html">dev.despical.mazeengine.api.model</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Immutable values describing maze identity, coordinates, geometry, and metadata.</div>
+</div>
 <div class="col-first odd-row-color"><a href="../request/package-summary.html">dev.despical.mazeengine.api.request</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Immutable request values for submitting maze creation with preset overrides.</div>
+</div>
 </div>
 </div>
 </li>

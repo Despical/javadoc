@@ -63,6 +63,28 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="horizontal-scroll">
 <div class="package-signature">package <span class="element-name">dev.despical.mazeengine.api.request</span></div>
+<section class="package-description" id="package-description">
+<div class="block">Immutable request values for submitting maze creation with preset overrides.
+<p>
+<a href="CreateMazeRequest.html" title="class in dev.despical.mazeengine.api.request"><code>CreateMazeRequest</code></a> specifies the
+maze identifier, world origin, logical grid size, and selected preset. Its
+builder provides optional overrides for generation and placement settings.
+Nullable constructor overrides inherit the current preset when absent,
+except that an absent seed is generated at submission. Explicit <code>false</code>
+and zero values remain supplied overrides rather than absence markers.
+<p>
+Construction validates local request values only. Submit a built request
+through <a href="../MazeOperations.html#create(org.bukkit.command.CommandSender,dev.despical.mazeengine.api.request.CreateMazeRequest)"><code>MazeOperations.create(CommandSender, CreateMazeRequest)</code></a> on the
+server thread while MazeEngine is enabled. The service resolves the current
+preset and checks the actor's permissions, world availability, configured
+limits, and conflicting reservations before accepting an operation.
+<p>
+A successfully constructed request does not reserve a maze name or guarantee
+that world work will succeed. Submission rejection throws directly; failures
+after acceptance are reported by the returned operation handle and lifecycle
+events. Retaining an immutable request does not make its preset reference a
+frozen copy of the configured preset.</div>
+</section>
 </div>
 <section class="summary">
 <ul class="summary-list">
@@ -77,11 +99,17 @@ loadScripts(document, 'script');</script>
 <div class="block">Public contracts for integrating other Bukkit plugins with MazeEngine.</div>
 </div>
 <div class="col-first odd-row-color"><a href="../event/package-summary.html">dev.despical.mazeengine.api.event</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Bukkit events reporting the terminal outcome of accepted maze operations.</div>
+</div>
 <div class="col-first even-row-color"><a href="../model/package-summary.html">dev.despical.mazeengine.api.model</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Immutable values describing maze identity, coordinates, geometry, and metadata.</div>
+</div>
 <div class="col-first odd-row-color"><a href="../operation/package-summary.html">dev.despical.mazeengine.api.operation</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Handles, progress samples, and results for accepted world-editing operations.</div>
+</div>
 </div>
 </div>
 </li>

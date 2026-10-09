@@ -63,6 +63,30 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="horizontal-scroll">
 <div class="package-signature">package <span class="element-name">dev.despical.mazeengine.api.model</span></div>
+<section class="package-description" id="package-description">
+<div class="block">Immutable values describing maze identity, coordinates, geometry, and metadata.
+<p>
+<a href="MazeId.html" title="class in dev.despical.mazeengine.api.model"><code>MazeId</code></a> identifies a saved maze,
+while <a href="CellPosition.html" title="class in dev.despical.mazeengine.api.model"><code>CellPosition</code></a> and
+<a href="CellSize.html" title="class in dev.despical.mazeengine.api.model"><code>CellSize</code></a> describe the logical cell
+grid. <a href="MazeLocation.html" title="class in dev.despical.mazeengine.api.model"><code>MazeLocation</code></a>,
+<a href="MazeBounds.html" title="class in dev.despical.mazeengine.api.model"><code>MazeBounds</code></a>, and
+<a href="MazeGeometry.html" title="class in dev.despical.mazeengine.api.model"><code>MazeGeometry</code></a> describe world block
+placement and structural dimensions without retaining mutable Bukkit objects.
+<p>
+<a href="MazeSnapshot.html" title="class in dev.despical.mazeengine.api.model"><code>MazeSnapshot</code></a> captures a saved record
+at one point in time. Its preset metadata remains frozen with that record,
+whereas <a href="../PresetRegistry.html" title="interface in dev.despical.mazeengine.api"><code>PresetRegistry</code></a> exposes the current
+configured <a href="PresetSnapshot.html" title="class in dev.despical.mazeengine.api.model"><code>PresetSnapshot</code></a> values.
+Coordinates, lifecycle state, and topology statistics describe saved metadata
+rather than a live scan of world blocks.
+<p>
+These values may be retained and read on other threads after a server-thread
+registry query or operation callback. They do not update after configuration
+reloads, regeneration, or deletion; query the registry again for a newer view.
+Retaining a maze identifier or snapshot does not reserve its name against
+reuse after deletion.</div>
+</section>
 </div>
 <section class="summary">
 <ul class="summary-list">
@@ -77,11 +101,17 @@ loadScripts(document, 'script');</script>
 <div class="block">Public contracts for integrating other Bukkit plugins with MazeEngine.</div>
 </div>
 <div class="col-first odd-row-color"><a href="../event/package-summary.html">dev.despical.mazeengine.api.event</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Bukkit events reporting the terminal outcome of accepted maze operations.</div>
+</div>
 <div class="col-first even-row-color"><a href="../operation/package-summary.html">dev.despical.mazeengine.api.operation</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Handles, progress samples, and results for accepted world-editing operations.</div>
+</div>
 <div class="col-first odd-row-color"><a href="../request/package-summary.html">dev.despical.mazeengine.api.request</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Immutable request values for submitting maze creation with preset overrides.</div>
+</div>
 </div>
 </div>
 </li>
