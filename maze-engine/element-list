@@ -1,0 +1,15 @@
+dev.despical.mazeengine
+dev.despical.mazeengine.api
+dev.despical.mazeengine.api.event
+dev.despical.mazeengine.api.model
+dev.despical.mazeengine.api.operation
+dev.despical.mazeengine.api.request
+dev.despical.mazeengine.command
+dev.despical.mazeengine.config
+dev.despical.mazeengine.core
+dev.despical.mazeengine.integration
+dev.despical.mazeengine.listener
+dev.despical.mazeengine.service
+dev.despical.mazeengine.service.api
+dev.despical.mazeengine.service.visual
+dev.despical.mazeengine.storage

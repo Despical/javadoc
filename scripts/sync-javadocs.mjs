@@ -35,10 +35,25 @@ for (const project of projects) {
             tempDir
         ], {stdio: "inherit"});
 
-        mkdirSync(targetDir, {recursive: true});
-        copyDirectoryContents(tempDir, targetDir, [".git", ".github", "CNAME"]);
+        try {
+            let sourceDir = tempDir;
 
-        rmSync(tempDir, {recursive: true, force: true});
+            if (project.javadoc) {
+                console.log(`Generating ${project.title} Javadocs with ${project.javadoc.task}`);
+                const args = [project.javadoc.task, "--no-daemon", "--console=plain"];
+                if (process.platform === "win32") {
+                    execFileSync("cmd.exe", ["/d", "/c", "gradlew.bat", ...args], {cwd: tempDir, stdio: "inherit"});
+                } else {
+                    execFileSync("bash", ["./gradlew", ...args], {cwd: tempDir, stdio: "inherit"});
+                }
+                sourceDir = join(tempDir, project.javadoc.directory);
+            }
+
+            mkdirSync(targetDir, {recursive: true});
+            copyDirectoryContents(sourceDir, targetDir, [".git", ".github", "CNAME"]);
+        } finally {
+            rmSync(tempDir, {recursive: true, force: true});
+        }
     } else {
         const sourceDir = join(root, project.slug);
 

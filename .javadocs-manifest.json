@@ -8,6 +8,8 @@
     "commons",
     "inventory-framework",
     "file-items",
-    "particle-text"
+    "particle-text",
+    "maze-engine",
+    "music-bot"
   ]
 }

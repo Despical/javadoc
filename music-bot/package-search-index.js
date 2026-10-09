@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html","k":"18"},{"l":"dev.despical.musicbot"},{"l":"dev.despical.musicbot.audio"},{"l":"dev.despical.musicbot.config"},{"l":"dev.despical.musicbot.i18n"},{"l":"dev.despical.musicbot.listener"},{"l":"dev.despical.musicbot.persistence"},{"l":"dev.despical.musicbot.spotify"}];updateSearchResults();

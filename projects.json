@@ -58,7 +58,7 @@
     "category": "Tools",
     "description": "A self-hosted Java worker that checks SpigotMC buyer lists and sends new-sale notifications to Discord. Includes configurable scans, purchase filtering, and persistent buyer tracking.",
     "monogram": "↗",
-    "order": 9,
+    "order": 10,
     "icon": "./assets/projects/spigot-sales-webhook.svg"
   },
   {
@@ -101,5 +101,35 @@
     "description": "Render customizable text with Minecraft particles. Adjust fonts, scale, rotation, and placement, with cached rendering, viewer distance limits, and PlaceholderAPI support.",
     "monogram": "Pt",
     "order": 5
+  },
+  {
+    "slug": "maze-engine",
+    "title": "Maze Engine",
+    "repo": "https://github.com/Despical/MazeEngine.git",
+    "branch": "main",
+    "javadoc": {
+      "task": "javadoc",
+      "directory": "build/docs/javadoc"
+    },
+    "category": "Plugins",
+    "description": "Create persistent, deterministic Minecraft mazes with themed presets, private previews, and route guides. Integrate with maze management, operation progress, terrain snapshots, and lifecycle events through its public API.",
+    "monogram": "Me",
+    "order": 9,
+    "icon": "./assets/projects/maze-engine.svg"
+  },
+  {
+    "slug": "music-bot",
+    "title": "MusicBot",
+    "repo": "https://github.com/Despical/MusicBot.git",
+    "branch": "main",
+    "javadoc": {
+      "task": "javadoc",
+      "directory": "build/docs/javadoc"
+    },
+    "category": "Tools",
+    "description": "A self-hosted Discord music bot built with JDA and LavaPlayer. Explore slash-command playback, YouTube and Spotify resolution, queue controls, replay history, and persistent guild settings.",
+    "monogram": "Mb",
+    "order": 11,
+    "icon": "./assets/projects/music-bot.svg"
   }
 ]

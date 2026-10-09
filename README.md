@@ -16,12 +16,14 @@ Central website for generated API documentation for Despical's open source proje
 * [InventoryFramework](https://javadoc.despical.dev/inventory-framework/)
 * [FileItems](https://javadoc.despical.dev/file-items/)
 * [ParticleText](https://javadoc.despical.dev/particle-text/)
+* [Maze Engine](https://javadoc.despical.dev/maze-engine/)
+* [MusicBot](https://javadoc.despical.dev/music-bot/)
 
 ---
 
 ## Local Development
 
-Install Node.js 22 or newer, then run:
+Install Node.js 22 or newer and Java 25, then run:
 
 ```powershell
 node scripts/sync-javadocs.mjs
@@ -31,6 +33,9 @@ node scripts/publish-root.mjs
 - `sync-javadocs.mjs` reads `projects.json`, clones each configured project
   branch or uses its committed Javadocs when no branch is set, and generates
   the site into `public/`.
+  Projects with a `javadoc` configuration generate documentation from their
+  source branch using the Gradle wrapper before copying the configured output
+  directory. Maze Engine and MusicBot use this flow to stay up to date with `main`.
 
 - `publish-root.mjs` copies the generated site files from `public/` into the
   GitHub Pages root, including `index.html`, project directories, `CNAME`, and

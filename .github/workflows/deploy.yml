@@ -28,6 +28,12 @@ jobs:
         with:
           node-version: 22
 
+      - name: Setup Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '25'
+
       - name: Sync Javadocs
         run: node scripts/sync-javadocs.mjs
 
