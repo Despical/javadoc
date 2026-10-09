@@ -100,7 +100,8 @@
     "category": "Libraries",
     "description": "Render customizable text with Minecraft particles. Adjust fonts, scale, rotation, and placement, with cached rendering, viewer distance limits, and PlaceholderAPI support.",
     "monogram": "Pt",
-    "order": 5
+    "order": 5,
+    "icon": "./assets/projects/particle-text.svg"
   },
   {
     "slug": "maze-engine",
