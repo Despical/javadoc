@@ -93,12 +93,17 @@
   },
   {
     "slug": "particle-text",
-    "title": "ParticleText",
+    "title": "Particle Text",
     "repo": "https://github.com/Despical/ParticleText.git",
     "spigot": "https://www.spigotmc.org/resources/particle-text.110996/",
     "builtbybit": "https://builtbybit.com/resources/particle-text.50324/",
-    "category": "Libraries",
-    "description": "Render customizable text with Minecraft particles. Adjust fonts, scale, rotation, and placement, with cached rendering, viewer distance limits, and PlaceholderAPI support.",
+    "branch": "main",
+    "javadoc": {
+      "task": "javadoc",
+      "directory": "build/docs/javadoc"
+    },
+    "category": "Plugins",
+    "description": "Create persistent Minecraft particle text with font, scale, rotation, and placement controls. Integrate with saved renderer management, cached point clouds, shared particle budgets, and PlaceholderAPI text.",
     "monogram": "Pt",
     "order": 5,
     "icon": "./assets/projects/particle-text.svg"

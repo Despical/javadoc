@@ -376,11 +376,11 @@
   <url><loc>https://javadoc.despical.dev/music-bot/dev/despical/musicbot/spotify/package-summary.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/ParticleTextPlugin.html</loc></url>
-  <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/command/AdminCommands.html</loc></url>
-  <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/command/Arguments.html</loc></url>
-  <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/command/ParticleCommands.html</loc></url>
-  <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/command/TabCompleters.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/command/BrigadierCommands.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/command/CommandDefinition.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/command/ParticleTextCommands.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/command/package-summary.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/config/ConfigurationFiles.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/config/PluginSettings.MenuSettings.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/config/PluginSettings.RendererDefaults.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/config/PluginSettings.html</loc></url>
@@ -389,6 +389,7 @@
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/menu/RendererMenu.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/menu/package-summary.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/message/MessageService.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/message/RendererPanels.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/message/Var.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/message/package-summary.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/model/FontSpec.html</loc></url>
@@ -401,18 +402,17 @@
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/package-summary.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/papi/ParticleTextExpansion.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/papi/PlaceholderApiTextResolver.html</loc></url>
-  <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/papi/PlainTextResolver.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/papi/TextResolver.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/papi/package-summary.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/persistence/RendererRepository.Snapshot.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/persistence/RendererRepository.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/persistence/package-summary.html</loc></url>
-  <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/render/Offset.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/render/ParticleTextRenderer.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/render/PointCloudFactory.Offset.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/render/PointCloudFactory.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/render/RendererService.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/render/package-summary.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/service/UpdateChecker.html</loc></url>
-  <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/service/VersionComparator.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/service/package-summary.html</loc></url>
   <url><loc>https://javadoc.despical.dev/spigot-sales-webhook/</loc></url>
   <url><loc>https://javadoc.despical.dev/spigot-sales-webhook/dev/despical/spigotsaleswebhook/SpigotSalesWebhookApplication.html</loc></url>
