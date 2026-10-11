@@ -414,6 +414,34 @@
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/render/package-summary.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/service/UpdateChecker.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/service/package-summary.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/PortBridgePlugin.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/bore/BoreInstaller.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/bore/BoreOutput.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/bore/MinecraftStatusProbe.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/bore/package-summary.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/command/BridgeCommands.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/command/ChatUI.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/command/package-summary.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/config/BridgeSettings.Binary.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/config/BridgeSettings.Health.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/config/BridgeSettings.Local.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/config/BridgeSettings.Reconnect.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/config/BridgeSettings.Relay.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/config/BridgeSettings.Startup.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/config/BridgeSettings.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/config/Messages.Appearance.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/config/Messages.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/config/SettingsLoader.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/config/package-summary.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/listener/PlayerJoinListener.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/listener/package-summary.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/package-summary.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/tunnel/RetryPolicy.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/tunnel/TunnelService.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/tunnel/TunnelSnapshot.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/tunnel/TunnelState.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/tunnel/package-summary.html</loc></url>
   <url><loc>https://javadoc.despical.dev/spigot-sales-webhook/</loc></url>
   <url><loc>https://javadoc.despical.dev/spigot-sales-webhook/dev/despical/spigotsaleswebhook/SpigotSalesWebhookApplication.html</loc></url>
   <url><loc>https://javadoc.despical.dev/spigot-sales-webhook/dev/despical/spigotsaleswebhook/config/AppConfig.DiscordSettings.html</loc></url>

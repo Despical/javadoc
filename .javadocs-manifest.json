@@ -10,6 +10,7 @@
     "file-items",
     "particle-text",
     "maze-engine",
-    "music-bot"
+    "music-bot",
+    "portbridge"
   ]
 }

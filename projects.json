@@ -137,5 +137,20 @@
     "monogram": "Mb",
     "order": 11,
     "icon": "./assets/projects/music-bot.svg"
+  },
+  {
+    "slug": "portbridge",
+    "title": "PortBridge",
+    "repo": "https://github.com/Despical/PortBridge.git",
+    "branch": "main",
+    "javadoc": {
+      "task": "javadoc",
+      "directory": "build/docs/javadoc"
+    },
+    "category": "Plugins",
+    "description": "Share a local Minecraft Java server through managed Bore TCP tunnels. Explore validated configuration, literal message templates, immutable connection snapshots, route health checks, and serialized native process ownership.",
+    "monogram": "Pb",
+    "order": 12,
+    "icon": "./assets/projects/portbridge.svg"
   }
 ]

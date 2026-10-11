@@ -18,6 +18,7 @@ Central website for generated API documentation for Despical's open source proje
 * [Particle Text](https://javadoc.despical.dev/particle-text/)
 * [Maze Engine](https://javadoc.despical.dev/maze-engine/)
 * [MusicBot](https://javadoc.despical.dev/music-bot/)
+* [PortBridge](https://javadoc.despical.dev/portbridge/)
 
 ---
 
@@ -35,7 +36,7 @@ node scripts/publish-root.mjs
   the site into `public/`.
   Projects with a `javadoc` configuration generate documentation from their
   source branch using the Gradle wrapper before copying the configured output
-  directory. Particle Text, Maze Engine, and MusicBot use this flow to stay up to date with `main`.
+  directory. Particle Text, Maze Engine, MusicBot, and PortBridge use this flow to stay up to date with `main`.
 
 - `publish-root.mjs` copies the generated site files from `public/` into the
   GitHub Pages root, including `index.html`, project directories, `CNAME`, and
