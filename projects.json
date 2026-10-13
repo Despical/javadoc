@@ -140,7 +140,7 @@
   },
   {
     "slug": "portbridge",
-    "title": "PortBridge",
+    "title": "Port Bridge",
     "repo": "https://github.com/Despical/PortBridge.git",
     "branch": "main",
     "javadoc": {
