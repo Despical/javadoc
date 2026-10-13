@@ -142,6 +142,7 @@
     "slug": "portbridge",
     "title": "Port Bridge",
     "repo": "https://github.com/Despical/PortBridge.git",
+    "spigot": "https://www.spigotmc.org/resources/port-bridge-local-server-tunnels.139616/",
     "branch": "main",
     "javadoc": {
       "task": "javadoc",
