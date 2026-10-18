@@ -1,7 +1,25 @@
-# Despical's Javadocs
+<p align="center">
+  <img src="favicon.svg" width="96" height="96" alt="Despical Javadocs icon">
+</p>
 
-[![](https://github.com/Despical/javadoc/actions/workflows/deploy.yml/badge.svg)](https://github.com/Despical/javadoc/actions/workflows/deploy.yml)
-[![Node.js 22](https://img.shields.io/badge/Node.js-22-339933.svg)](https://nodejs.org/)
+<h1 align="center">Despical Javadocs</h1>
+
+<p align="center">Generated API documentation for Despical's open source Minecraft plugins and developer tools.</p>
+
+<p align="center">
+  <a href="https://github.com/Despical/javadoc/actions/workflows/deploy.yml"><img src="https://github.com/Despical/javadoc/actions/workflows/deploy.yml/badge.svg" alt="Deployment"></a>
+  <img src="https://img.shields.io/badge/Java-25-007396.svg" alt="Java 25">
+  <img src="https://img.shields.io/badge/Node.js-22-5fa04e?logo=nodedotjs&amp;logoColor=white" alt="Node.js 22">
+  <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="https://img.shields.io/badge/License-GPLv3-blue" alt="GPLv3 license"></a>
+</p>
+
+<p align="center">
+  <a href="https://javadoc.despical.dev/">Browse Javadocs</a> ·
+  <a href="https://docs.despical.dev/">Read the Docs</a> ·
+  <a href="https://hub.despical.dev/">Plugin Hub</a>
+</p>
+
+---
 
 Central website for generated API documentation for Despical's open source projects.
 
