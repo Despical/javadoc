@@ -153,5 +153,20 @@
     "monogram": "Pb",
     "order": 12,
     "icon": "./assets/projects/portbridge.svg"
+  },
+  {
+    "slug": "pixel-painter",
+    "title": "Pixel Painter",
+    "repo": "https://github.com/Despical/PixelPainter.git",
+    "branch": "main",
+    "javadoc": {
+      "task": "javadoc",
+      "directory": "build/docs/javadoc"
+    },
+    "category": "Plugins",
+    "description": "Turn PNG, JPEG and WebP images into Minecraft block art with perceptual color matching and persistent undo. Explore the planning pipeline, region-aware painting service, undo journals and Folia-safe scheduling.",
+    "monogram": "Pp",
+    "order": 13,
+    "icon": "./assets/projects/pixel-painter.svg"
   }
 ]
