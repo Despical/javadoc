@@ -1,0 +1,8 @@
+dev.despical.pixelpainter
+dev.despical.pixelpainter.command
+dev.despical.pixelpainter.config
+dev.despical.pixelpainter.core
+dev.despical.pixelpainter.image
+dev.despical.pixelpainter.listener
+dev.despical.pixelpainter.service
+dev.despical.pixelpainter.storage

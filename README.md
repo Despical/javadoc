@@ -55,7 +55,7 @@ node scripts/publish-root.mjs
   the site into `public/`.
   Projects with a `javadoc` configuration generate documentation from their
   source branch using the Gradle wrapper before copying the configured output
-  directory. Particle Text, Maze Engine, MusicBot, Port Bridge, and Pixel Painter use this flow to stay up to date with `main`.
+  directory. Particle Text, Maze Engine, MusicBot, and Port Bridge use this flow to stay up to date with `main`.
 
 - `publish-root.mjs` copies the generated site files from `public/` into the
   GitHub Pages root, including `index.html`, project directories, `CNAME`, and
