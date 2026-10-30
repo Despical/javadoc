@@ -158,6 +158,8 @@
     "slug": "pixel-painter",
     "title": "Pixel Painter",
     "repo": "https://github.com/Despical/PixelPainter.git",
+    "spigot": "https://www.spigotmc.org/resources/pixel-painter-1-8-1-21-11.104770/",
+    "builtbybit": "https://builtbybit.com/resources/pixel-painter.50284/",
     "category": "Plugins",
     "description": "Turn PNG, JPEG and WebP images into Minecraft block art with perceptual color matching and persistent undo. Explore the planning pipeline, region-aware painting service, undo journals and Folia-safe scheduling.",
     "monogram": "Pp",
