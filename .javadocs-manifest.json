@@ -11,6 +11,7 @@
     "particle-text",
     "maze-engine",
     "music-bot",
-    "portbridge"
+    "portbridge",
+    "pixel-painter"
   ]
 }

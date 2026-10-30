@@ -414,6 +414,42 @@
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/render/package-summary.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/service/UpdateChecker.html</loc></url>
   <url><loc>https://javadoc.despical.dev/particle-text/dev/despical/particletext/service/package-summary.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/PixelPainter.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/command/ChatLayout.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/command/ChatPanels.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/command/CommandAction.Group.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/command/CommandAction.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/command/PainterCommands.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/command/package-summary.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/config/ConfigurationManager.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/config/Messages.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/config/Settings.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/config/package-summary.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/core/Bounds.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/core/ColorMath.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/core/Orientation.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/core/PaintError.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/core/PaintException.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/core/Position.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/core/package-summary.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/image/BlockPalette.Entry.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/image/BlockPalette.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/image/ImagePlanner.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/image/ImageStore.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/image/PaintPlan.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/image/package-summary.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/listener/PainterListener.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/listener/package-summary.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/package-summary.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/service/PaintService.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/service/Scheduling.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/service/TaskExecutor.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/service/package-summary.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/storage/PaintRecord.Change.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/storage/PaintRecord.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/storage/UndoStore.html</loc></url>
+  <url><loc>https://javadoc.despical.dev/pixel-painter/dev/despical/pixelpainter/storage/package-summary.html</loc></url>
   <url><loc>https://javadoc.despical.dev/portbridge/</loc></url>
   <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/PortBridgePlugin.html</loc></url>
   <url><loc>https://javadoc.despical.dev/portbridge/dev/despical/portbridge/bore/BoreInstaller.html</loc></url>
