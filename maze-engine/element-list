@@ -13,3 +13,4 @@ dev.despical.mazeengine.service
 dev.despical.mazeengine.service.api
 dev.despical.mazeengine.service.visual
 dev.despical.mazeengine.storage
+dev.despical.mazeengine.util
